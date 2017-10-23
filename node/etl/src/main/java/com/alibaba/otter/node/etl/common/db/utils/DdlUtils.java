@@ -68,7 +68,7 @@ public class DdlUtils {
                 }
             } else if (sqlName instanceof SQLIdentifierExpr) {
                 String oldTable = unescapeName(((SQLIdentifierExpr) sqlName).getName());
-                if (targetTable == null || oldTable.equalsIgnoreCase(targetTable)) {
+                if (targetTable == null || oldTable.equalsIgnoreCase(targetTable) == false) {
                     // try {
                     // // 拼上一个schema
                     // this.appender.append("`" + targetSchema + "`");
